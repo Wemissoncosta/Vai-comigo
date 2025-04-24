@@ -12,7 +12,7 @@
     <div class="header">Bem-Vindo</div>
     <div class="login-container">
         <h2>Efetue seu Login</h2>
-        <form>
+        <form action="/login-endpoint" method="POST">
             <div class="form-group">
                 <label for="matricula">Matrícula</label>
                 <input type="text" id="matricula" name="matricula" placeholder="Digite sua matrícula" required>
@@ -21,12 +21,10 @@
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </div>
-            <button onclick="window.location.href='esquceu a senha.html'" class="login-button">
-                Acessar
-            </button>
+            <button type="submit" class="login-button">Acessar</button>
         </form>
         <div class="forgot-password">
-            Esqueceu sua senha? <a href="esquceu a senha.html">Clique aqui</a>
+            Esqueceu sua senha? <a href="esqueceu-a-senha.html">Clique aqui</a>
         </div>
     </div>
 
