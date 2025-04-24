@@ -1,11 +1,11 @@
 body {
+    position: relative;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: 100vh;
     background-color: #f3f3f3;
 }
@@ -14,7 +14,6 @@ body {
     background-color: #004E89;
     color: white;
     width: 100%;
-    margin:0 0 5% 0;
     text-align: center;
     padding: 20px 0;
     font-size: 24px;
@@ -23,11 +22,11 @@ body {
 
 .login-container {
     background: #fff;
-    margin: 0 0 5% 0;
+    margin: auto;
     padding: 20px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 76%;
     text-align: center;
 }
 
@@ -71,7 +70,7 @@ body {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .login-button a{
@@ -95,9 +94,10 @@ body {
 .forgot-password a:hover {
     text-decoration: underline;
 }
-
-.Logo {
-    margin-top: 0px;
+.Logo{
+    position: static;
+    margin-top: 5%;
+    bottom: 0;
 }
 
 .Logo img {
