@@ -21,15 +21,15 @@ body {
 }
 .Logo{
     margin: 0 39%;
-    border-radius: 50%;
     position: static;
     display: flex;
     justify-content: center;
 }
 
 .Logo img {
+    border-radius: 100vw;
     width: 100%;
-    height: 50px;
+    height: 6%;
 }
 .botao-perfil{
     position: absolute;
