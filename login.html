@@ -12,7 +12,7 @@
     <div class="header">Bem-Vindo</div>
     <div class="login-container">
         <h2>Efetue seu Login</h2>
-        <form>
+        <form id="form">
             <div class="form-group">
                 <label for="matricula">Matrícula</label>
                 <input type="text" id="matricula" name="matricula" placeholder="Digite sua matrícula" required>
@@ -20,8 +20,9 @@
             <div class="form-group">
                 <label for="senha">Senha</label>
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <p id="text">.</p>
             </div>
-            <button type="button" id="botao" class="login-button">
+            <button type="submit" id="botao" class="login-button">
                 Acessar
             </button>
         </form>
