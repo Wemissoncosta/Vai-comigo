@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="50" viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Car icon background circle -->
+    <circle cx="25" cy="25" r="23" fill="#004AAD"/>
+    <!-- Car body -->
+    <path d="M15 28h20v-8l-2.5-5h-15L15 20z" fill="white"/>
+    <!-- Wheels -->
+    <circle cx="18" cy="30" r="3" fill="white"/>
+    <circle cx="32" cy="30" r="3" fill="white"/>
+    <!-- Windows -->
+    <path d="M17.5 20v-4.5l2.5-2h10l2.5 2v4.5z" fill="white"/>
+  </g>
+  <!-- Text with more space -->
+  <text x="60" y="35" font-family="Poppins, sans-serif" font-size="28" font-weight="600" fill="#004AAD">VaiComigo</text>
+</svg>
