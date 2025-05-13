@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestor - VaiComigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="css/gestor.css" rel="stylesheet" />
+</head>
+<body>
+
+    <main class="container mt-4">
+        <h1> Gestor - Gerenciamento de Usuários e Caronas</h1>
+
+        <section id="gerenciamento-usuarios" class="my-4">
+            <h2>Usuários</h2>
+
+            <form class="mb-4">
+                <div class="row g-3 align-items-center">
+
+                        <select class="selecao-formulario" required>
+                            <option value="" disabled selected>Tipo de Usuário</option>
+                            <option value="gestor">Gestor</option>
+                            <option value="aluno">Aluno</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="controle-formulario" placeholder="Matrícula" required />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="controle-formulario" placeholder="Nome" required />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="email" class="controle-formulario" placeholder="E-mail" required />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="password" class="controle-formulario" placeholder="Senha" required />
+                    </div>
+                    <div class="col-md-1 d-grid">
+                        <button type="button" class="btn btn-success">Criar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="lista-usuarios" class="grupo-lista">
+                <!-- Lista de usuários será exibida aqui -->
+                <div class="item-lista">João Silva - Aluno - 202310001</div>
+                <div class="item-lista">Maria Santos - Gestor - 202310002</div>
+            </div>
+        </section>
+
+        <section id="gerenciamento-caronas" class="my-4">
+            <h2>Carona</h2>
+            <div id="lista-caronas" class="grupo-lista">
+                <!-- Lista de caronas será exibida aqui -->
+                <div class="item-lista">Carona de João Silva para Centro - 25/03/2024</div>
+                <div class="item-lista">Carona de Maria Santos para IFTO Campus Colinas - 26/03/2024</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
