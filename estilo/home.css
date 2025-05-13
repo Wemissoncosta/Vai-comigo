@@ -1,1 +1,136 @@
-.container-home { max-width: 800px; margin: 2rem auto; background: white; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.1); overflow: hidden; } .cabecalho-boas-vindas { background-color: #004AAD; color: white; padding: 2rem; text-align: center; } .avatar-usuario { width: 120px; height: 120px; border-radius: 50%; background-color: #fff; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; } .avatar-usuario i { font-size: 4rem; color: #004AAD; } .container-estatisticas { display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; } .item-estatistica { text-align: center; background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px; min-width: 120px; } .numero-estatistica { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.25rem; } .rotulo-estatistica { font-size: 0.9rem; opacity: 0.9; } .botoes-acao { display: flex; gap: 1rem; justify-content: center; margin: 1.5rem 0; } .secao-conteudo { padding: 2rem; } .titulo-secao { font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: #004AAD; } .cartao-carona { border: 1px solid #e9ecef; border-radius: 10px; margin-bottom: 1rem; transition: transform 0.2s, box-shadow 0.2s; } .cartao-carona:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); } .info-carona { padding: 1rem; } .cabecalho-carona { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; } .info-carona i { width: 20px; text-align: center; margin-right: 8px; color: #004AAD; } @media (max-width: 576px) { .container-home { margin: 0; border-radius: 0; } .cabecalho-boas-vindas { padding: 1.5rem; } .container-estatisticas { flex-wrap: wrap; gap: 1rem; } .item-estatistica { min-width: calc(50% - 0.5rem); } .botoes-acao { flex-direction: column; } .secao-conteudo { padding: 1.5rem; } }
+.container-home {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cabecalho-boas-vindas {
+    background-color: #004AAD;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.avatar-usuario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-usuario i {
+    font-size: 4rem;
+    color: #004AAD;
+}
+
+.container-estatisticas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.item-estatistica {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 120px;
+}
+
+.numero-estatistica {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.rotulo-estatistica {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.secao-conteudo {
+    padding: 2rem;
+}
+
+.titulo-secao {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #004AAD;
+}
+
+.cartao-carona {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-carona:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-carona {
+    padding: 1rem;
+}
+
+.cabecalho-carona {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.info-carona i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+    color: #004AAD;
+}
+
+@media (max-width: 576px) {
+    .container-home {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .cabecalho-boas-vindas {
+        padding: 1.5rem;
+    }
+
+    .container-estatisticas {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .item-estatistica {
+        min-width: calc(50% - 0.5rem);
+    }
+
+    .botoes-acao {
+        flex-direction: column;
+    }
+
+    .secao-conteudo {
+        padding: 1.5rem;
+    }
+}
