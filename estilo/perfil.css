@@ -1,0 +1,128 @@
+.container-perfil {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.cabecalho-perfil {
+  background-color: #004aad;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+.avatar-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-perfil i {
+  font-size: 4rem;
+  color: #004aad;
+}
+.estatisticas-perfil {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.estatistica {
+  text-align: center;
+}
+.numero-estatistica {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.rotulo-estatistica {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.conteudo-perfil {
+  padding: 2rem;
+}
+.secao-perfil {
+  margin-bottom: 2rem;
+}
+.secao-perfil:last-child {
+  margin-bottom: 0;
+}
+.titulo-secao {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.titulo-secao i {
+  color: #004aad;
+}
+.lista-notificacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.notificacao {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.notificacao i {
+  color: #004aad;
+  font-size: 1.25rem;
+}
+.conteudo-notificacao {
+  flex: 1;
+}
+.hora-notificacao {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+.historico-caronas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cartao-carona {
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.cabecalho-carona {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.data-carona {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.avaliacao-carona {
+  color: #ffc107;
+}
+@media (max-width: 576px) {
+  .container-perfil {
+    margin: 0;
+    border-radius: 0;
+  }
+  .cabecalho-perfil {
+    padding: 1.5rem;
+  }
+  .conteudo-perfil {
+    padding: 1.5rem;
+  }
+  .estatisticas-perfil {
+    gap: 1rem;
+  }
+}
