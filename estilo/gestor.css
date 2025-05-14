@@ -1,0 +1,48 @@
+.container-gestor {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.selecao-formulario {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+}
+
+.controle-formulario {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+}
+
+.grupo-lista {
+    margin-top: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.item-lista {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ced4da;
+}
+
+.item-lista:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 576px) {
+    .container-gestor {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carona Ativa - VaiComigo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/carona-ativa.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <i class="fas fa-car-side"></i> VaiComigo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Cadastrar Carona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="busca.html">Buscar Carona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="carona-ativa.html">
+                <i class="fas fa-car"></i>
+                Carona Ativa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="chat.html">
+                <i class="fas fa-comments"></i>
+                Chat
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="notificacoes.html">
+                <i class="fas fa-bell"></i>
+                Notificações
+                <span class="badge bg-danger">3</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="perfil.html">
+                <i class="fas fa-user-circle"></i>
+                Perfil
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-sign-out-alt"></i>
+                Sair
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mt-4">
+      <h1>Carona Ativa</h1>
+
+      <section class="active-ride my-4 p-4 border rounded shadow-sm">
+        <h2>Detalhes da Carona</h2>
+        <p><strong>Origem:</strong> IFTO Campus Colinas</p>
+        <p><strong>Destino:</strong> Centro</p>
+        <p><strong>Data e Hora:</strong> 25/03/2024 às 18:00</p>
+        <p><strong>Status:</strong> Em andamento</p>
+      </section>
+
+      <section class="participants my-4">
+        <div class="row">
+          <div class="col-md-6 participant-card p-3 border rounded shadow-sm">
+            <h3><i class="fas fa-user-tie"></i> Motorista</h3>
+            <p><strong>Nome:</strong> João Silva</p>
+            <p><strong>Contato:</strong> joao.silva@ifto.edu.br</p>
+            <p><strong>Avaliação:</strong> 4.8 / 5</p>
+            <button class="btn btn-outline-primary w-100 mb-2">
+              Chat com Motorista
+            </button>
+          </div>
+          <div class="col-md-6 participant-card p-3 border rounded shadow-sm">
+            <h3><i class="fas fa-user"></i> Passageiro</h3>
+            <p><strong>Nome:</strong> Maria Santos</p>
+            <p><strong>Contato:</strong> maria.santos@ifto.edu.br</p>
+            <p><strong>Avaliação:</strong> 4.7 / 5</p>
+            <button class="btn btn-outline-primary w-100 mb-2">
+              Chat com Passageiro
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="actions my-4 d-flex gap-3">
+        <button class="btn btn-success flex-fill">
+          <i class="fas fa-check-circle me-2"></i>
+          Finalizar Carona
+        </button>
+        <button class="btn btn-warning flex-fill">
+          <i class="fas fa-star me-2"></i>
+          Avaliar Carona
+        </button>
+      </section>
+    </main>
+
+    <!-- Modal de Avaliação -->
+    <div class="modal fade" id="avaliacaoModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Avaliar Carona</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="avaliacaoForm">
+              <div class="mb-3">
+                <label class="form-label">Avalie sua experiência</label>
+                <div class="rating">
+                  <i class="fas fa-star fs-3 text-warning" data-rating="1"></i>
+                  <i class="fas fa-star fs-3 text-warning" data-rating="2"></i>
+                  <i class="fas fa-star fs-3 text-warning" data-rating="3"></i>
+                  <i class="fas fa-star fs-3 text-warning" data-rating="4"></i>
+                  <i class="fas fa-star fs-3 text-warning" data-rating="5"></i>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Comentário (opcional)</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Deixe seu comentário sobre a carona..."
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="submitAvaliacao()"
+            >
+              Enviar Avaliação
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Finalização -->
+    <div class="modal fade" id="finalizarModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Finalizar Carona</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Você está prestes a finalizar esta carona. Isso não pode ser
+              desfeito.
+            </p>
+            <div class="alert alert-info">
+              <i class="fas fa-info-circle me-2"></i>
+              Após finalizar, você poderá avaliar a carona.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="finalizarCarona()"
+            >
+              Confirmar Finalização
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+  </body>
+</html>
