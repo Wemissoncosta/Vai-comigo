@@ -1,0 +1,41 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+    color: #004AAD;
+}
+
+.active-ride {
+    background-color: white;
+}
+
+.participant-card {
+    background-color: white;
+}
+
+.actions button {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.actions button.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.actions button.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: black;
+}
+
+.actions button:hover {
+    opacity: 0.9;
+}
+
+.participant-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
