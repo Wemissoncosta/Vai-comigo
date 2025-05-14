@@ -1,0 +1,68 @@
+.container-login {
+    max-width: 400px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.container-logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.imagem-logo {
+    max-width: 150px;
+    margin-bottom: 0.5rem;
+}
+
+.texto-muted {
+    color: #6c757d;
+}
+
+.formulario-login {
+    width: 100%;
+}
+
+.rotulo-formulario {
+    font-weight: 600;
+    color: #004AAD;
+}
+
+.controle-formulario {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+}
+
+.grupo-input {
+    display: flex;
+}
+
+.grupo-input input {
+    flex: 1;
+}
+
+.esqueceu-senha {
+    display: block;
+    margin-top: 1rem;
+    color: #004AAD;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.texto-formulario {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 576px) {
+    .container-login {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
