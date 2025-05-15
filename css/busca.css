@@ -1,0 +1,67 @@
+.container-busca {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+.rotulo-formulario {
+    font-weight: 600;
+    color: #004AAD;
+}
+
+.controle-formulario {
+    padding: 1rem 1.25rem;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.resultados-busca {
+    margin-top: 2rem;
+}
+
+.titulo-secao {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #004AAD;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cartao-carona {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titulo-cartao {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.texto-cartao {
+    margin-bottom: 0.25rem;
+}
+
+.botao-solicitar-carona {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .container-busca {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
