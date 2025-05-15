@@ -71,3 +71,21 @@ function submitRecovery() {
         form.reportValidity();
     }
 }
+
+let map;
+function initMap() {
+    //Colinas do Tocantins
+    const defaultCenter = { lat: -8.0574, lng: -48.4757 };
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: defaultCenter,
+        zoom: 12,
+        styles: mapStyle 
+    });
+}
+const mapStyle = [
+    {
+        "featureType": "all",
+        "elementType": "geometry.fill",
+        "stylers": [{"weight": "2.00"}]
+    },
+];
