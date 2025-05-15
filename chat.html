@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat - VaiComigo</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/chat.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <i class="fas fa-car-side"></i>
+          VaiComigo
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fas fa-home"></i>
+                Início
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">
+                <i class="fas fa-plus-circle"></i>
+                Cadastrar Carona
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="busca.html">
+                <i class="fas fa-search"></i>
+                Buscar Carona
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carona-ativa.html">
+                <i class="fas fa-car"></i>
+                Carona Ativa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="chat.html">
+                <i class="fas fa-comments"></i>
+                Chat
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="notificacoes.html">
+                <i class="fas fa-bell"></i>
+                Notificações
+                <span class="badge bg-danger">3</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="perfil.html">
+                <i class="fas fa-user-circle"></i>
+                Perfil
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="fas fa-sign-out-alt"></i>
+                Sair
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Chat Container -->
+    <div class="container">
+      <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="chat-sidebar">
+          <div class="chat-search">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Buscar conversa..."
+                id="chatSearch"
+              />
+              <button class="btn btn-outline-secondary" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="chat-contacts" id="chatContacts">
+            <!-- Contacts will be dynamically loaded here -->
+            <div class="text-center text-muted p-3">Carregando contatos...</div>
+          </div>
+        </div>
+
+        <!-- Main Chat -->
+        <div class="chat-main">
+          <div class="chat-header">
+            <div class="d-flex align-items-center">
+              <button
+                class="btn btn-link d-lg-none me-2 p-0"
+                onclick="toggleSidebar()"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <h5 class="mb-0" id="currentContact">Selecione um contato</h5>
+            </div>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically loaded here -->
+            <div class="text-center text-muted">
+              Selecione um contato para iniciar uma conversa
+            </div>
+          </div>
+          <div class="chat-input">
+            <form id="messageForm" onsubmit="sendMessage(event)">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Digite sua mensagem..."
+                id="messageInput"
+                disabled
+              />
+              <button
+                type="submit"
+                class="btn btn-primary"
+                disabled
+                id="sendButton"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+		
