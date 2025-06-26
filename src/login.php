@@ -1,9 +1,60 @@
+<?php
+session_start();
+require_once 'Classes/Usuario.php';
+
+$page_title = 'Entrar';
+$page_css = 'style-login.css';
+
+$erro = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $matricula = $_POST['matricula'] ?? '';
+    $senha = $_POST['password'] ?? '';
+    
+    if (empty($matricula) || empty($senha)) {
+        $erro = 'Matrícula e senha são obrigatórios';
+    } else {
+        try {
+            $usuario = Usuario::autenticarPorMatricula($matricula, $senha);
+            
+            if ($usuario) {
+                // Guarda dados do usuário na sessão
+                $_SESSION['usuario_logado'] = [
+                    'id' => $usuario->id,
+                    'nome' => $usuario->nome,
+                    'email' => $usuario->email,
+                    'tipo_usuario' => $usuario->tipo_usuario,
+                    'foto_perfil' => $usuario->foto_perfil,
+                    'matricula' => $usuario->matricula,
+                    'telefone' => $usuario->telefone
+                ];
+                
+                // Redireciona conforme tipo de usuário
+                switch ($usuario->tipo_usuario) {
+                    case 'admin':
+                        header('Location: gestor.php');
+                        break;
+                    case 'aluno':
+                    default:
+                        header('Location: home.html');
+                        break;
+                }
+                exit;
+            } else {
+                $erro = 'Matrícula ou senha inválidos';
+            }
+        } catch (Exception $e) {
+            $erro = 'Erro ao fazer login: ' . $e->getMessage();
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - VaiComigo</title>
+    <title><?php echo $page_title;?> - VaiComigo</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,23 +66,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style-login.css">
+    <link rel="stylesheet" href="css/<?php echo $page_css;?>">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
 </head>
 <body>
-    <!-- Main -->
+    <!-- Conteúdo principal -->
     <div class="container">
         <div class="container-login">
-            <!-- Logo -->
+            <!-- Logo do sistema -->
             <div class="container-logo">
                 <img src="imagens/logo-final.svg" alt="VaiComigo" class="imagem-logo">
                 <p class="texto-muted">IFTO - Campus Colinas do Tocantins</p>
             </div>
             
-            <!-- formulario de logim -->
-            <form id="formulario-login" class="formulario-login">
+            <?php if ($erro): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <?= $erro ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            <?php endif; ?>
+            
+            <!-- Formulário de login -->
+            <form id="formulario-login" class="formulario-login" method="POST">
                 <div class="mb-4">
                     <label class="rotulo-formulario">
                         <i class="fas fa-id-card text-primary me-2"></i>
@@ -43,6 +102,7 @@
                         class="controle-formulario" 
                         placeholder="Digite sua matrícula" 
                         pattern=".*"
+                        value="<?= htmlspecialchars($_POST['matricula'] ?? '') ?>"
                         autocomplete="username"
                         autofocus
                         tabindex="1"
@@ -66,7 +126,7 @@
                             tabindex="2"
                             required
                         >
-                        <!-- btn de visualisar senha -->
+                        <!-- Botão para mostrar/ocultar senha -->
                         <button 
                             class="btn btn-outline-secondary" 
                             type="button"
@@ -91,7 +151,7 @@
         </div>
     </div>
 
-    <!-- modo de recuperação de senha -->
+    <!-- Modal de recuperação de senha -->
     <div class="modal fade" id="recoveryModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
