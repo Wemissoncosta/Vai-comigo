@@ -1,25 +1,8 @@
 const AUTH_KEY = 'vaicomigo_auth';
 
 document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.querySelector('#formulario-login');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const matricula = e.target.querySelector('input[type="text"]').value;
-            const password = e.target.querySelector('input[type="password"]').value;
-            
-
-            if (matricula == '202520242023' && password == '123456') {
-                localStorage.setItem(AUTH_KEY, JSON.stringify({ matricula, name: 'Aluno Especial' }));
-                location.href = 'home.html';
-            } else if (matricula === '9' && password === '123456') {
-                localStorage.setItem(AUTH_KEY, JSON.stringify({ matricula, name: 'Gestor Especial' }));
-                location.href = 'gestor.html';
-            } else {
-                showAlert('Matrícula ou senha inválidos', 'danger');
-            }
-        });
-    }
+    // Remover a interceptação do formulário de login
+    // O formulário agora será enviado normalmente para o servidor PHP
 });
 
 

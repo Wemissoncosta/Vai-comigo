@@ -1,0 +1,35 @@
+services:
+  php:
+    build: .
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    command: apache2-foreground
+
+  db:
+    image: mysql:8.0
+    restart: always
+    ports:
+      - 9306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: vaicomigo
+    volumes:
+      - ./src/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+    depends_on:
+      - db
+
+volumes:
+  db_data:
